@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales */
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* estilos.css */
+:root {
+  /* Shared Variables */
+  --transition: all 0.3s ease;
+
+  /* Light Mode Variables */
+  --primary-light: #f0f0f0; /* Fondo principal claro */
+  --secondary-light: #ffffff; /* Fondo secundario */
+  --accent-light: #b164ff; /* Color llamativo */
+  --text-primary-light: #2d1b3d; /* Texto principal oscuro */
+  --text-secondary-light: #5a4066; /* Texto secundario más claro */
+  --gradient-light: linear-gradient(135deg, #ffffff 0%, #f7ebff 100%);
+  --card-bg-light: rgba(240, 244, 248, 0.5); /* Fondo translúcido */
+  --nav-bg-light: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Barra de navegación translúcida */
+
+  /* Dark Mode Variables */
+  --primary-dark: #1a1025; /* Fondo principal oscuro */
+  --secondary-dark: #2d1b3d; /* Fondo secundario más claro */
+  --accent-dark: #b164ff; /* Color llamativo */
+  --text-primary-dark: #e2d9f3; /* Texto principal claro */
+  --text-secondary-dark: #9c8bb0; /* Texto secundario más claro */
+  --gradient-dark: linear-gradient(135deg, #1a1025 0%, #2d1b3d 100%);
+  --card-bg-dark: rgba(45, 27, 61, 0.5); /* Fondo translúcido */
+  --nav-bg-dark: rgba(26, 16, 37, 0.85); /* Barra de navegación translúcida */
+}
+
+/* Light Theme */
+body.light-theme {
+  --primary: var(--primary-light);
+  --secondary: var(--secondary-light);
+  --accent: var(--accent-light);
+  --text-primary: var(--text-primary-light);
+  --text-secondary: var(--text-secondary-light);
+  --gradient: var(--gradient-light);
+  --card-bg: var(--card-bg-light);
+  --nav-bg: var(--nav-bg-light);
+
+  background-color: var(--primary);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --primary: var(--primary-dark);
+  --secondary: var(--secondary-dark);
+  --accent: var(--accent-dark);
+  --text-primary: var(--text-primary-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --gradient: var(--gradient-dark);
+  --card-bg: var(--card-bg-dark);
+  --nav-bg: var(--nav-bg-dark);
+
+  background-color: var(--primary);
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+/* Accent Elements */
+a,
+.btn-accent {
+  color: var(--accent);
+  transition: var(--transition);
+}
+
+a:hover,
+.btn-accent:hover {
+  filter: brightness(1.2);
+}
+
+/* Gradient Backgrounds */
+.bg-gradient {
+  background: var(--gradient);
+  transition: var(--transition);
+}
+
+/* Transparent Card Backgrounds */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+/* Navbar Styles */
+.navbar {
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}

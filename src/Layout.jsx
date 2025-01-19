@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import BottomScreenButtons from "./components/BottomScreenButtons";
 import Home from "./views/Home";
 import CoverParticles from "./components/CoverParticles";
+import About from "./views/About";
 
 const Layout = () => {
   return (
@@ -12,6 +13,7 @@ const Layout = () => {
       <div className="relative">
         <Navbar />
         <Home />
+        <About />
       </div>
 
       {/* Componentes flotantes */}

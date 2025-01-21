@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-const CTAButton = ({ label, href, variant = "primary", target = "_self" }) => {
+const CTAButton = ({
+  label,
+  href,
+  variant = "primary",
+  target = "_self",
+  useIcon = false,
+}) => {
   const baseClasses =
     "px-6 py-3 rounded-lg font-medium relative overflow-hidden transition-transform hover:-translate-y-1";
   const variantClasses =
@@ -14,8 +22,9 @@ const CTAButton = ({ label, href, variant = "primary", target = "_self" }) => {
     <a
       href={href}
       target={target}
-      className={`${baseClasses} ${variantClasses} ${shadowClasses}`}
+      className={`${baseClasses} ${variantClasses} ${shadowClasses} flex items-center gap-2`}
     >
+      {useIcon && <FontAwesomeIcon icon={faGithub} />}
       {label}
     </a>
   );
@@ -26,6 +35,7 @@ CTAButton.propTypes = {
   href: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(["primary", "secondary"]),
   target: PropTypes.string,
+  useIcon: PropTypes.bool,
 };
 
 export default CTAButton;

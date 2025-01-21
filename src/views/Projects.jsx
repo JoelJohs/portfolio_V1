@@ -1,10 +1,21 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import ProjectsData from "../data/projects.jsx"; // Update the import path
+import ProjectsData from "../data/projectsData.jsx";
 import ProjectCard from "../components/ProjectCard";
+import ProjectModal from "../components/ProjectModal";
 
 const Projects = () => {
   const { t } = useTranslation();
   const projects = ProjectsData();
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleCardClick = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <section
@@ -19,9 +30,10 @@ const Projects = () => {
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
+          <ProjectCard key={project.id} project={project} onClick={() => handleCardClick(project)} />
         ))}
       </div>
+      {selectedProject && <ProjectModal project={selectedProject} onClose={closeModal} />}
     </section>
   );
 };

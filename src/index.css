@@ -43,6 +43,8 @@
     rgba(26, 16, 37, 0.95) 0%,
     rgba(26, 16, 37, 0.5) 100%
   );
+  --modal-gradient-light: linear-gradient(135deg, #ffffff, #f3e8ff);
+  --modal-gradient-dark: linear-gradient(135deg, #1a1025, #311b45);
 }
 
 body.light {
@@ -55,6 +57,7 @@ body.light {
   --card-bg: var(--card-bg-light);
   --bg-opacity: var(--bg-opacity-light);
   --card-gradient: var(--card-gradient-light);
+  --modal-gradient: var(--modal-gradient-light);
   background-color: var(--primary);
   color: var(--text-primary);
   transition: var(--transition);
@@ -71,6 +74,7 @@ body.dark {
   --card-bg: var(--card-bg-dark);
   --bg-opacity: var(--bg-opacity-dark);
   --card-gradient: var(--card-gradient-dark);
+  --modal-gradient: var(--modal-gradient-dark);
   background-color: var(--primary);
   color: var(--text-primary);
   transition: var(--transition);
@@ -270,4 +274,22 @@ body.dark .translation-toggle-button {
   .carousel-track {
     flex-wrap: nowrap;
   }
+}
+
+.modal-overlay .bg-gradient-to-r {
+  background: var(--modal-gradient);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--secondary);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--accent);
+  border-radius: 10px;
+  border: 3px solid var(--secondary);
 }

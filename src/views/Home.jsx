@@ -1,11 +1,23 @@
 import CTAButton from "../components/buttons/CTAButton";
 import EmailButton from "../components/buttons/EmailButton";
+import DownloadCVButton from "../components/buttons/DownloadCVButton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const handleDownloadCV = () => {
+    const cvPath =
+      i18n.language === "es"
+        ? "/cv/CV_Joel_Josafat_Hernández_Saucedo_Español.pdf"
+        : "/cv/CV_Joel_Josafat_Hernández_Saucedo_English.pdf";
+    const link = document.createElement("a");
+    link.href = cvPath;
+    link.download = cvPath.split("/").pop();
+    link.click();
+  };
 
   return (
     <main
@@ -31,8 +43,9 @@ const Home = () => {
             {t("home.profession")}
           </h2>
           <p className="mb-4 text-center md:text-left">{t("home.focus")}</p>
-          <div className="flex justify-center md:justify-start">
+          <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4">
             <EmailButton email={"jojohersa21@gmail.com"} />
+            <DownloadCVButton onClick={handleDownloadCV} />
           </div>
           <div className="flex gap-4 my-4 justify-center md:justify-start">
             <CTAButton

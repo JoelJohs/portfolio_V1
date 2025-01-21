@@ -9,9 +9,10 @@
     "greeting": "Hola, Soy",
     "name": "Joel Johs",
     "profession": "Desarrollador Fullstack",
-    "focus": "Enfocado mayormente al backend",
+    "focus": "Enfocado en backend, con experiencia en frontend",
     "ctaProjects": "Ve Mis Proyectos",
-    "ctaContact": "Contactame"
+    "ctaContact": "Contactame",
+    "downloadCV": "Descargar CV"
   },
   "about": {
     "title": "Sobre Mi",
@@ -39,7 +40,20 @@
     "portfolioWebsite": {
       "title": "Portafolio Web",
       "description": "Un portafolio personal que muestra proyectos, blogs y currículum. Nuestro proyecto actual, diseñado con Tailwind CSS y React.",
-      "note": "Actualmente, no tengo mi propio dominio debido a limitaciones presupuestarias"
-    }
+      "note": "Actualmente, no tengo mi propio dominio debido a limitaciones presupuestarias",
+      "longDescription": "Un portafolio personal que muestra proyectos, blogs y currículum. Este proyecto actual está diseñado con Tailwind CSS y React. Incluye una sección de proyectos destacados, información sobre mi experiencia y habilidades, y un formulario de contacto.",
+      "keyFeatures": [
+        "Diseño responsivo",
+        "Soporte multilenguaje",
+        "Modo oscuro",
+        "Amigable con SEO",
+        "Carga rápida",
+        "Fácil de mantener"
+      ]
+    },
+    "viewCode": "Código",
+    "liveDemo": "Demo",
+    "keyFeatures": "Características Clave",
+    "technologyStack": "Tecnologías Utilizadas"
   }
 }

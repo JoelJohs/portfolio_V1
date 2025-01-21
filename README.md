@@ -45,12 +45,22 @@ Esta imagen es para adornar y porque quiero ser igual de fuerte que Toji. Ademá
 Para ejecutar este proyecto en tu máquina local, sigue estos pasos:
 
 1. Clona el repositorio:
+
+   Con SSH:
+
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone git@github.com:JoelJohs/portfolio_V1.git
    ```
+
+   Con HTTPS:
+
+   ```bash
+   git clone https://github.com/JoelJohs/portfolio_V1.git
+   ```
+
 2. Navega al directorio del proyecto:
    ```bash
-   cd tu-repositorio
+   cd portfolio_V1
    ```
 3. Instala las dependencias:
    ```bash
@@ -67,4 +77,4 @@ Este proyecto puede ser desplegado utilizando servicios como Vercel, Netlify, o 
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
+Este proyecto no tiene una licencia específica.

@@ -5,9 +5,9 @@ const projects = [
     description:
       "A personal portfolio showcasing projects, blogs, and resume. Designed with Tailwind CSS and React.",
     tags: ["React", "Tailwind CSS", "JavaScript"],
-    codeLink: "https://github.com/johndoe/portfolio",
+    codeLink: "https://github.com/JoelJohs/portfolio_V1",
     liveDemo: "https://portfolio-demo.com",
-    image: "https://via.placeholder.com/600x400",
+    image: "/screenshots/portfolio.jpeg",
   },
 ];
 

@@ -8,6 +8,7 @@ const projects = [
     codeLink: "https://github.com/JoelJohs/portfolio_V1",
     liveDemo: "https://portfolio-demo.com",
     image: "/screenshots/portfolio.jpeg",
+    note: "Currently, I do not have my own domain due to budget constraints",
   },
 ];
 

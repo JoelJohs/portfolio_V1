@@ -61,6 +61,11 @@ body.light {
   --card-bg: var(--card-bg-light);
   --nav-bg: var(--nav-bg-light);
   --bg-opacity: var(--bg-opacity-light);
+  --name-gradient: linear-gradient(
+    135deg,
+    #421c5d,
+    #9d5cd1
+  ); /* Updated gradient for better contrast */
 
   background-color: var(--primary);
   color: var(--text-primary);
@@ -78,6 +83,7 @@ body.dark {
   --card-bg: var(--card-bg-dark);
   --nav-bg: var(--nav-bg-dark);
   --bg-opacity: var(--bg-opacity-dark);
+  --name-gradient: linear-gradient(135deg, #8a3fc9, #d4afff);
 
   background-color: var(--primary);
   color: var(--text-primary);
@@ -266,6 +272,13 @@ body.dark .translation-toggle-button {
     var(--secondary)
   );
   border-radius: 15px; /* Ensure the corners are rounded */
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: var(--name-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Responsive Styles */

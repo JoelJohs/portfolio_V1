@@ -24,7 +24,8 @@ const Home = () => {
       <div className="md:mx-5 flex justify-center md:justify-start">
         <div>
           <h1 className="mb-2 text-center md:text-left">
-            {t("home.greeting")} <span>{t("home.name")}</span>
+            {t("home.greeting")}{" "}
+            <span className="gradient-text">{t("home.name")}</span>
           </h1>
           <h2 className="mb-2 text-center md:text-left">
             {t("home.profession")}

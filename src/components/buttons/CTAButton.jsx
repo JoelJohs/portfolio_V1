@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const CTAButton = ({ label, href, variant = "primary" }) => {
+const CTAButton = ({ label, href, variant = "primary", target = "_self" }) => {
   const baseClasses =
     "px-6 py-3 rounded-lg font-medium relative overflow-hidden transition-transform hover:-translate-y-1";
   const variantClasses =
@@ -13,6 +13,7 @@ const CTAButton = ({ label, href, variant = "primary" }) => {
   return (
     <a
       href={href}
+      target={target}
       className={`${baseClasses} ${variantClasses} ${shadowClasses}`}
     >
       {label}
@@ -24,6 +25,7 @@ CTAButton.propTypes = {
   label: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(["primary", "secondary"]),
+  target: PropTypes.string,
 };
 
 export default CTAButton;

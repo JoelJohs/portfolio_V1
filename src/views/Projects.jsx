@@ -1,30 +1,26 @@
+import { useTranslation } from "react-i18next";
+import ProjectsData from "../data/projects.jsx"; // Update the import path
+import ProjectCard from "../components/ProjectCard";
+
 const Projects = () => {
+  const { t } = useTranslation();
+  const projects = ProjectsData();
+
   return (
     <section
       id="projects"
       className="min-h-screen flex flex-col p-10 md:px-20 md:py-20"
     >
-      <h1 className="mb-10 text-center">Projects</h1>
-      <p className="leading-relaxed text-center mb-10">
-        Here you can find some of the projects I have worked on. Each project
-        showcases different skills and technologies I have used.
+      <h1 className="mb-10 text-center text-3xl font-bold">
+        {t("projects.title")}
+      </h1>
+      <p className="leading-relaxed text-center mb-10 text-lg">
+        {t("projects.description")}
       </p>
-      <div className="flex flex-col md:flex-row md:gap-10">
-        <div className="items-center">
-          {/* Placeholder for project cards */}
-          <div className="flex items-center ">
-            <p>Project 1</p>
-          </div>
-          <div className="flex items-center ">
-            <p>Project 2</p>
-          </div>
-          <div className="flex items-center">
-            <p>Project 3</p>
-          </div>
-          <div className="flex items-center">
-            <p>Project 4</p>
-          </div>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </div>
     </section>
   );

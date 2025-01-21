@@ -32,5 +32,14 @@
       "apiDesign": "Diseño de API",
       "dataModeling": "Modelado de Datos"
     }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "description": "Aquí puedes encontrar algunos de los proyectos en los que he trabajado. Cada proyecto muestra diferentes habilidades y tecnologías que he utilizado.",
+    "portfolioWebsite": {
+      "title": "Portafolio Web",
+      "description": "Un portafolio personal que muestra proyectos, blogs y currículum. Nuestro proyecto actual, diseñado con Tailwind CSS y React.",
+      "note": "Actualmente, no tengo mi propio dominio debido a limitaciones presupuestarias"
+    }
   }
 }

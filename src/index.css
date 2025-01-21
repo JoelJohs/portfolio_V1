@@ -6,51 +6,45 @@
 
 /* estilos.css */
 :root {
-  /* Variables Compartidas */
   --transition: all 0.3s ease;
-
-  /* Light Mode Variables */
-  --primary-light: #f0f0f0; /* Fondo principal */
-  --secondary-light: #ffffff; /* Fondo secundario */
-  --accent-light: #8a3fc9; /* Acento definido */
-  --text-primary-light: #1a1025; /* Texto principal */
-  --text-secondary-light: #3b2a4a; /* Texto secundario */
+  --primary-light: #f0f0f0;
+  --secondary-light: #ffffff;
+  --accent-light: #8a3fc9;
+  --text-primary-light: #1a1025;
+  --text-secondary-light: #3b2a4a;
   --gradient-light: linear-gradient(
     135deg,
     #ffffff 0%,
     #f3e8ff 50%,
     #d4afff 100%
-  ); /* Blanco a púrpura claro */
-  --card-bg-light: rgba(240, 244, 248, 0.7); /* Fondo de tarjeta más claro */
-  --bg-opacity-light: rgba(
-    200,
-    180,
-    255,
-    0.5
-  ); /* Fondo con opacidad más visible para tema claro con un toque de púrpura */
-
-  /* Dark Mode Variables */
-  --primary-dark: #1a1025; /* Fondo principal */
-  --secondary-dark: #2d1b3d; /* Fondo secundario */
-  --accent-dark: #9d5cd1; /* Acento ligeramente más claro */
-  --text-primary-dark: #f2e6ff; /* Texto principal */
-  --text-secondary-dark: #d9b3ff; /* Texto secundario */
+  );
+  --card-bg-light: rgba(240, 244, 248, 0.7);
+  --bg-opacity-light: rgba(200, 180, 255, 0.5);
+  --primary-dark: #1a1025;
+  --secondary-dark: #2d1b3d;
+  --accent-dark: #9d5cd1;
+  --text-primary-dark: #f2e6ff;
+  --text-secondary-dark: #d9b3ff;
   --gradient-dark: linear-gradient(
     135deg,
     #12081d 0%,
     #311b45 50%,
     #421c5d 100%
-  ); /* Gradiente más oscuro */
-  --card-bg-dark: rgba(26, 16, 37, 0.85); /* Fondo de tarjeta más oscuro */
-  --bg-opacity-dark: rgba(
-    26,
-    16,
-    37,
-    0.3
-  ); /* Fondo con opacidad para tema oscuro */
+  );
+  --card-bg-dark: rgba(26, 16, 37, 0.85);
+  --bg-opacity-dark: rgba(26, 16, 37, 0.3);
+  --card-gradient-light: linear-gradient(
+    135deg,
+    rgba(240, 244, 248, 0.85) 0%,
+    rgba(200, 180, 255, 0.7) 100%
+  );
+  --card-gradient-dark: linear-gradient(
+    135deg,
+    rgba(26, 16, 37, 0.95) 0%,
+    rgba(26, 16, 37, 0.5) 100%
+  );
 }
 
-/* Light Theme */
 body.light {
   --primary: var(--primary-light);
   --secondary: var(--secondary-light);
@@ -59,20 +53,14 @@ body.light {
   --text-secondary: var(--text-secondary-light);
   --gradient: var(--gradient-light);
   --card-bg: var(--card-bg-light);
-  --nav-bg: var(--nav-bg-light);
   --bg-opacity: var(--bg-opacity-light);
-  --name-gradient: linear-gradient(
-    135deg,
-    #421c5d,
-    #9d5cd1
-  ); /* Updated gradient for better contrast */
-
+  --card-gradient: var(--card-gradient-light);
   background-color: var(--primary);
   color: var(--text-primary);
   transition: var(--transition);
+  --name-gradient: linear-gradient(135deg, #421c5d, #9d5cd1);
 }
 
-/* Dark Theme */
 body.dark {
   --primary: var(--primary-dark);
   --secondary: var(--secondary-dark);
@@ -81,23 +69,20 @@ body.dark {
   --text-secondary: var(--text-secondary-dark);
   --gradient: var(--gradient-dark);
   --card-bg: var(--card-bg-dark);
-  --nav-bg: var(--nav-bg-dark);
   --bg-opacity: var(--bg-opacity-dark);
-  --name-gradient: linear-gradient(135deg, #8a3fc9, #d4afff);
-
+  --card-gradient: var(--card-gradient-dark);
   background-color: var(--primary);
   color: var(--text-primary);
   transition: var(--transition);
+  --name-gradient: linear-gradient(135deg, #8a3fc9, #d4afff); 
 }
 
-/* Transparent Card Backgrounds */
 .card {
   background: var(--card-bg);
   backdrop-filter: blur(10px);
   transition: var(--transition);
 }
 
-/* Navbar Styles */
 .navbar {
   backdrop-filter: blur(5px);
   transition: var(--transition);
@@ -111,7 +96,6 @@ body.dark {
   transition: var(--transition);
 }
 
-/* Estilos globales */
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -121,7 +105,6 @@ body {
   transition: var(--transition);
 }
 
-/* Tipografía */
 h1 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
@@ -155,7 +138,6 @@ a {
   transition: var(--transition);
 }
 
-/* Accent Elements */
 .theme-toggle-button {
   transition: var(--transition);
 }
@@ -176,7 +158,6 @@ body.dark .theme-toggle-button {
   filter: brightness(1.4);
 }
 
-/* Translation Button Styles */
 .translation-toggle-button {
   transition: var(--transition);
 }
@@ -197,7 +178,6 @@ body.dark .translation-toggle-button {
   filter: brightness(1.4);
 }
 
-/* Animaciones */
 @keyframes bounce {
   0%,
   20%,
@@ -214,7 +194,6 @@ body.dark .translation-toggle-button {
   }
 }
 
-/** Home **/
 .image-container {
   position: relative;
   display: inline-block;
@@ -248,7 +227,6 @@ body.dark .translation-toggle-button {
   left: 10px;
 }
 
-/* Carrousel de tecnologías */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -271,17 +249,15 @@ body.dark .translation-toggle-button {
     var(--secondary),
     var(--secondary)
   );
-  border-radius: 15px; /* Ensure the corners are rounded */
+  border-radius: 15px;
 }
 
-/* Gradient Text */
 .gradient-text {
   background: var(--name-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .card {
     padding: 1rem;

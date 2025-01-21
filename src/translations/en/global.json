@@ -1,0 +1,36 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "home": {
+    "greeting": "Hello, I am",
+    "name": "Joel Johs",
+    "profession": "Fullstack Developer",
+    "focus": "Mainly focused on backend",
+    "ctaProjects": "See My Projects",
+    "ctaContact": "Contact Me"
+  },
+  "about": {
+    "title": "About Me",
+    "location": "Morelia, Michoacán, México",
+    "education": "Instituto Tecnológico de Morelia",
+    "experience": "3+ Years Experience",
+    "projects": "10+ Projects Completed",
+    "description1": "Fullstack developer with experience in creating scalable and efficient applications, proficient in both frontend and backend development. Experience with frameworks such as NestJS, Express, React, Astro, and Django.",
+    "description2": "Skilled in SQL (MySQL, PostgreSQL) and NoSQL (MongoDB) databases, and REST service integration. Basic knowledge of Docker for deployments.",
+    "description3": "Professional goal: Master backend development in JavaScript and Python, as well as other relevant languages like PHP.",
+    "technicalExpertise": "Technical Expertise",
+    "keySkills": "Key Skills",
+    "skills": {
+      "versionControl": "Version Control (Git)",
+      "databaseManagement": "Database Management",
+      "frontendDevelopment": "Frontend Development",
+      "backendDevelopment": "Backend Development",
+      "apiDesign": "API Design",
+      "dataModeling": "Data Modeling"
+    }
+  }
+}

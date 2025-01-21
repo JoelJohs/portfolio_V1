@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
-import { HamburgerIcon } from "../assets/NavbarIcons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const Navbar = () => {
+  const { t } = useTranslation(); // Initialize useTranslation
   const [active, setActive] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,7 +67,7 @@ const Navbar = () => {
                   handleScrollToSection(section);
                 }}
               >
-                {section.charAt(0).toUpperCase() + section.slice(1)}
+                {t(`navbar.${section}`)} {/* Use translation */}
               </a>
             </li>
           ))}
@@ -74,10 +77,13 @@ const Navbar = () => {
       <div
         className={`fixed top-4 left-4 md:top-10 md:left-8 transition-opacity ${
           isScrolled ? "opacity-100" : "opacity-0"
-        }`}
+        } ${isMenuOpen ? "hidden" : "block"}`}
       >
-        <button onClick={toggleMenu} className="p-2 rounded-full shadow-md">
-          <HamburgerIcon width="1.5em" height="1.5em" />
+        <button
+          onClick={toggleMenu}
+          className="p-2 rounded-full shadow-md z-40"
+        >
+          <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
       </div>
 
@@ -102,7 +108,7 @@ const Navbar = () => {
                       toggleMenu(); // Cerrar el menú después de hacer clic
                     }}
                   >
-                    {section.charAt(0).toUpperCase() + section.slice(1)}
+                    {t(`navbar.${section}`)} {/* Use translation */}
                   </a>
                 </li>
               ))}

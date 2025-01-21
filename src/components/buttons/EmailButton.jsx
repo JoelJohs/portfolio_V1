@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { EmailIcon, CopyIcon } from "../../assets/HeroIcons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faCopy } from "@fortawesome/free-solid-svg-icons";
 
 const EmailButton = ({ email }) => {
   const [tooltipVisible, setTooltipVisible] = useState(false);
@@ -18,7 +19,8 @@ const EmailButton = ({ email }) => {
         className="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-accent font-bold bg-transparent hover:bg-accent hover:text-primary transition-all"
         onClick={handleCopy}
       >
-        <EmailIcon /> {email} <CopyIcon />
+        <FontAwesomeIcon icon={faEnvelope} /> {email}{" "}
+        <FontAwesomeIcon icon={faCopy} />
       </button>
       {tooltipVisible && (
         <span

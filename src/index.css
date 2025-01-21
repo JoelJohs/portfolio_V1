@@ -13,8 +13,8 @@
   --primary-light: #f0f0f0; /* Fondo principal */
   --secondary-light: #ffffff; /* Fondo secundario */
   --accent-light: #8a3fc9; /* Acento definido */
-  --text-primary-light: #2d1b3d; /* Texto principal */
-  --text-secondary-light: #5a4066; /* Texto secundario */
+  --text-primary-light: #1a1025; /* Texto principal */
+  --text-secondary-light: #3b2a4a; /* Texto secundario */
   --gradient-light: linear-gradient(
     135deg,
     #ffffff 0%,
@@ -22,13 +22,19 @@
     #d4afff 100%
   ); /* Blanco a púrpura claro */
   --card-bg-light: rgba(240, 244, 248, 0.7); /* Fondo de tarjeta más claro */
+  --bg-opacity-light: rgba(
+    200,
+    180,
+    255,
+    0.5
+  ); /* Fondo con opacidad más visible para tema claro con un toque de púrpura */
 
   /* Dark Mode Variables */
   --primary-dark: #1a1025; /* Fondo principal */
   --secondary-dark: #2d1b3d; /* Fondo secundario */
   --accent-dark: #9d5cd1; /* Acento ligeramente más claro */
-  --text-primary-dark: #d8c8f0; /* Texto principal */
-  --text-secondary-dark: #73597f; /* Texto secundario */
+  --text-primary-dark: #f2e6ff; /* Texto principal */
+  --text-secondary-dark: #d9b3ff; /* Texto secundario */
   --gradient-dark: linear-gradient(
     135deg,
     #12081d 0%,
@@ -36,6 +42,12 @@
     #421c5d 100%
   ); /* Gradiente más oscuro */
   --card-bg-dark: rgba(26, 16, 37, 0.85); /* Fondo de tarjeta más oscuro */
+  --bg-opacity-dark: rgba(
+    26,
+    16,
+    37,
+    0.3
+  ); /* Fondo con opacidad para tema oscuro */
 }
 
 /* Light Theme */
@@ -48,6 +60,7 @@ body.light {
   --gradient: var(--gradient-light);
   --card-bg: var(--card-bg-light);
   --nav-bg: var(--nav-bg-light);
+  --bg-opacity: var(--bg-opacity-light);
 
   background-color: var(--primary);
   color: var(--text-primary);
@@ -64,6 +77,7 @@ body.dark {
   --gradient: var(--gradient-dark);
   --card-bg: var(--card-bg-dark);
   --nav-bg: var(--nav-bg-dark);
+  --bg-opacity: var(--bg-opacity-dark);
 
   background-color: var(--primary);
   color: var(--text-primary);
@@ -156,6 +170,27 @@ body.dark .theme-toggle-button {
   filter: brightness(1.4);
 }
 
+/* Translation Button Styles */
+.translation-toggle-button {
+  transition: var(--transition);
+}
+
+body.light .translation-toggle-button {
+  background-color: #ffffff;
+  color: var(--text-primary-light);
+}
+
+body.dark .translation-toggle-button {
+  background-color: #2d1b3d;
+  color: var(--text-primary-dark);
+}
+
+.translation-toggle-button:hover {
+  transform: scale(1.15);
+  background-color: var(--accent);
+  filter: brightness(1.4);
+}
+
 /* Animaciones */
 @keyframes bounce {
   0%,
@@ -205,4 +240,45 @@ body.dark .theme-toggle-button {
 .image-container:hover::after {
   top: 10px;
   left: 10px;
+}
+
+/* Carrousel de tecnologías */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@layer utilities {
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+}
+
+.technologies-carousel {
+  background: linear-gradient(
+    135deg,
+    var(--secondary),
+    var(--secondary),
+    var(--secondary)
+  );
+  border-radius: 15px; /* Ensure the corners are rounded */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .skills-carousel {
+    padding: 1rem;
+  }
+
+  .carousel-track {
+    flex-wrap: nowrap;
+  }
 }

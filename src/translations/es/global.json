@@ -55,5 +55,15 @@
     "liveDemo": "Demo",
     "keyFeatures": "Características Clave",
     "technologyStack": "Tecnologías Utilizadas"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "email": "jojohersa21@gmail.com",
+    "github": "https://github.com/JoelJohs",
+    "linkedin": "linkedin.com/in/joel-johs",
+    "namePlaceholder": "Tu Nombre",
+    "emailPlaceholder": "Tu Correo Electrónico",
+    "messagePlaceholder": "Tu Mensaje",
+    "sendMessage": "Enviar Mensaje"
   }
 }

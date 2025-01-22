@@ -4,6 +4,7 @@ import Home from "./views/Home";
 import CoverParticles from "./components/CoverParticles";
 import About from "./views/About";
 import Projects from "./views/Projects";
+import Contact from "./views/Contact";
 
 const Layout = () => {
   return (
@@ -16,6 +17,7 @@ const Layout = () => {
         <Home />
         <About />
         <Projects />
+        <Contact />
       </div>
 
       {/* Componentes flotantes */}

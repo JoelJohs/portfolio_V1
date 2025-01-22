@@ -35,14 +35,14 @@ const ProjectCard = ({ project, onClick }) => {
             label={t("projects.viewCode")}
             href={project.codeLink}
             variant="primary"
-            target="__blank"
+            target="_blank"
             useIcon={true}
           />
           <CTAButton
             label={t("projects.liveDemo")}
             href={project.liveDemo}
             variant="secondary"
-            target="__blank"
+            target="_blank"
           />
         </div>
       </div>

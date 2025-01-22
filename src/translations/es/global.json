@@ -64,7 +64,10 @@
     "namePlaceholder": "Tu Nombre",
     "emailPlaceholder": "Tu Correo Electrónico",
     "messagePlaceholder": "Tu Mensaje",
-    "sendMessage": "Enviar Mensaje"
+    "sendMessage": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "successMessage": "¡Mensaje enviado con éxito!",
+    "errorMessage": "Error al enviar el mensaje: "
   },
   "footer": {
     "copyright": "© 2025 Joel Josafat Hernández Saucedo. Todos los derechos reservados."

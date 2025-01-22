@@ -1,10 +1,48 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useTranslation } from "react-i18next";
+import { supabase } from "../supabaseClient";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const { t } = useTranslation();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const { error } = await supabase.from("Data").insert([formData]);
+
+    setLoading(false);
+
+    if (error) {
+      toast.error(t("contact.errorMessage") + error.message);
+    } else {
+      toast.success(t("contact.successMessage"));
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
+  };
 
   return (
     <section
@@ -53,7 +91,11 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <form id="contact-form" className="contact-form flex flex-col gap-6">
+        <form
+          id="contact-form"
+          className="contact-form flex flex-col gap-6"
+          onSubmit={handleSubmit}
+        >
           <div className="form-group">
             <input
               type="text"
@@ -62,6 +104,8 @@ const Contact = () => {
               required
               placeholder={t("contact.namePlaceholder")}
               className="w-full p-4 bg-[var(--primary)] border-2 border-transparent text-[var(--text-primary)] rounded-lg transition-all focus:border-[var(--accent)] focus:shadow-outline"
+              value={formData.name}
+              onChange={handleChange}
             />
           </div>
           <div className="form-group">
@@ -72,6 +116,8 @@ const Contact = () => {
               required
               placeholder={t("contact.emailPlaceholder")}
               className="w-full p-4 bg-[var(--primary)] border-2 border-transparent text-[var(--text-primary)] rounded-lg transition-all focus:border-[var(--accent)] focus:shadow-outline"
+              value={formData.email}
+              onChange={handleChange}
             />
           </div>
           <div className="form-group">
@@ -81,17 +127,25 @@ const Contact = () => {
               required
               placeholder={t("contact.messagePlaceholder")}
               className="w-full p-4 bg-[var(--primary)] border-2 border-transparent text-[var(--text-primary)] rounded-lg transition-all focus:border-[var(--accent)] focus:shadow-outline h-40 resize-vertical"
+              value={formData.message}
+              onChange={handleChange}
             ></textarea>
           </div>
           <button
             type="submit"
-            className="btn primary relative overflow-hidden p-4 bg-[var(--accent)] text-[var(--primary)] rounded-lg transition-all hover:scale-105"
+            className={`btn primary relative overflow-hidden p-4 rounded-lg transition-all hover:scale-105 ${
+              loading
+                ? "bg-gray-500 cursor-not-allowed"
+                : "bg-[var(--accent)] text-[var(--primary)]"
+            }`}
+            disabled={loading}
           >
-            {t("contact.sendMessage")}
+            {loading ? t("contact.sending") : t("contact.sendMessage")}
             <FontAwesomeIcon icon={faPaperPlane} className="ml-2" />
           </button>
         </form>
       </div>
+      <ToastContainer />
     </section>
   );
 };

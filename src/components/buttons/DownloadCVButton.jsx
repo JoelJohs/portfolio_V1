@@ -8,7 +8,7 @@ const DownloadCVButton = ({ onClick }) => {
 
   return (
     <button
-      className="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-accent font-bold bg-transparent hover:bg-accent hover:text-primary transition-all"
+      className="w-full md:w-auto flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-accent font-bold bg-transparent hover:bg-accent hover:text-primary transition-all text-center md:text-left"
       onClick={onClick}
     >
       <FontAwesomeIcon icon={faDownload} /> {t("home.downloadCV")}

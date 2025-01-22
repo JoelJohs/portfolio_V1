@@ -43,7 +43,7 @@ const Home = () => {
             {t("home.profession")}
           </h2>
           <p className="mb-4 text-center md:text-left">{t("home.focus")}</p>
-          <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center md:justify-start gap-4 px-6 md:px-0 w-full md:w-auto">
             <EmailButton email={"jojohersa21@gmail.com"} />
             <DownloadCVButton onClick={handleDownloadCV} />
           </div>

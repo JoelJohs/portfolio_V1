@@ -15,6 +15,7 @@ const Home = () => {
         : "https://drive.google.com/file/d/1vZtobr4Ww08wJdGcL0ynOsn3YXYXa-ne/view?usp=drive_link";
     const link = document.createElement("a");
     link.href = cvPath;
+    link.target = "_blank";
     link.download = cvPath.split("/").pop();
     link.click();
   };

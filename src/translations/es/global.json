@@ -39,9 +39,9 @@
     "description": "Aquí puedes encontrar algunos de los proyectos en los que he trabajado. Cada proyecto muestra diferentes habilidades y tecnologías que he utilizado.",
     "portfolioWebsite": {
       "title": "Portafolio Web",
-      "description": "Un portafolio personal que muestra proyectos, blogs y currículum. Nuestro proyecto actual, diseñado con Tailwind CSS y React.",
-      "note": "Actualmente, no tengo mi propio dominio debido a limitaciones presupuestarias",
-      "longDescription": "Un portafolio personal que muestra proyectos, blogs y currículum. Este proyecto actual está diseñado con Tailwind CSS y React. Incluye una sección de proyectos destacados, información sobre mi experiencia y habilidades, y un formulario de contacto.",
+      "description": "Un espacio personal donde muestro mis proyectos, blogs y mi currículum. Este proyecto está diseñado usando Tailwind CSS y React.",
+      "note": "No tengo mi propio dominio por el momento debido a limitaciones de presupuesto",
+      "longDescription": "Este portafolio web es una ventana a mi trabajo. Aquí comparto mis proyectos, información sobre mi experiencia y habilidades, y una forma de contacto para quien quiera conectar conmigo. Está diseñado con Tailwind CSS y React.",
       "keyFeatures": [
         "Diseño responsivo",
         "Soporte multilenguaje",
@@ -65,5 +65,8 @@
     "emailPlaceholder": "Tu Correo Electrónico",
     "messagePlaceholder": "Tu Mensaje",
     "sendMessage": "Enviar Mensaje"
+  },
+  "footer": {
+    "copyright": "© 2025 Joel Josafat Hernández Saucedo. Todos los derechos reservados."
   }
 }

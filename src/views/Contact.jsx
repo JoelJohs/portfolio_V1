@@ -50,15 +50,18 @@ const Contact = () => {
       className="min-h-screen flex flex-col p-8 md:px-16 md:py-20 bg-[var(--bg-opacity)]"
     >
       <h2 className="font-bold mb-10 text-center">{t("contact.title")}</h2>
-      <div className="contact-content grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-        <div className="contact-info flex flex-col gap-6">
+      <div className="contact-content flex flex-col gap-10 max-w-5xl mx-auto md:flex-row">
+        <div className="contact-info flex flex-col gap-6 md:w-1/2">
           <div className="contact-item flex items-center gap-4 p-4 rounded-lg transition-all hover:bg-[var(--card-bg)] hover:translate-x-2">
             <FontAwesomeIcon
               icon={faEnvelope}
               size="2x"
               className="text-[var(--accent)]"
             />
-            <a href="mailto:jojohersa21@gmail.com" className="text-lg">
+            <a
+              href="mailto:jojohersa21@gmail.com"
+              className="text-lg md:text-xl"
+            >
               {t("contact.email")}
             </a>
           </div>
@@ -71,7 +74,7 @@ const Contact = () => {
             <a
               href="https://github.com/JoelJohs"
               target="_blank"
-              className="text-lg"
+              className="text-lg md:text-xl"
             >
               {t("contact.github")}
             </a>
@@ -85,7 +88,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/joel-johs/"
               target="_blank"
-              className="text-lg"
+              className="text-lg md:text-xl"
             >
               {t("contact.linkedin")}
             </a>
@@ -93,7 +96,7 @@ const Contact = () => {
         </div>
         <form
           id="contact-form"
-          className="contact-form flex flex-col gap-6"
+          className="contact-form flex flex-col gap-6 md:w-1/2"
           onSubmit={handleSubmit}
         >
           <div className="form-group">

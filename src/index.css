@@ -274,6 +274,11 @@ body.dark .translation-toggle-button {
   .carousel-track {
     flex-wrap: nowrap;
   }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
 }
 
 .modal-overlay .bg-gradient-to-r {
@@ -295,16 +300,6 @@ body.dark .translation-toggle-button {
 }
 
 /* Contact Section */
-.contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
 .contact-info {
   display: flex;
   flex-direction: column;

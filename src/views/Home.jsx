@@ -11,8 +11,8 @@ const Home = () => {
   const handleDownloadCV = () => {
     const cvPath =
       i18n.language === "es"
-        ? "cv/CV_Joel_Josafat_Hernández_Saucedo_Español.pdf"
-        : "cv/CV_Joel_Josafat_Hernández_Saucedo_English.pdf";
+        ? "https://drive.google.com/file/d/1mKI2ZEJc6eyY2raOUM4FIP0wTV_rgpi4/view?usp=drive_link"
+        : "https://drive.google.com/file/d/1vZtobr4Ww08wJdGcL0ynOsn3YXYXa-ne/view?usp=drive_link";
     const link = document.createElement("a");
     link.href = cvPath;
     link.download = cvPath.split("/").pop();
